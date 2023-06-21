@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    background: rgb(238, 174, 202);
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 25%, rgba(148, 187, 233, 1) 75%);
+    font-family: 'Kanit', sans-serif;
+    font-size: larger;
+    text-decoration: none;
+}
+
+.verse {
+    line-height: 2;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.song {
+    margin: auto;
+    margin-top: 2rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a:hover {
+    background: rgb(187, 0, 255);
+}
+
+a {
+    transition: .3s all;
+}
+
+.circlejr {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: rgb(54, 154, 154);
+    border: rgb(29, 83, 91) 1px solid;
+    animation: bubble infinite 1s linear;
+    animation-delay: calc(0.1s* var(--i));
+}
+
+.circle {
+    height: 75px;
+    width: 75px;
+    background: rgb(63, 108, 156);
+    border: rgb(58, 27, 130) 1px solid;
+    animation: move-right infinite 2s linear;
+
+
+}
+
+.jr {
+    display: flex;
+    transform: translateX(-110%);
+    z-index: 0;
+}
+
+
+
+@keyframes move-right {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(500px);
+        border-radius: 50%;
+    }
+}
+
+@keyframes bubble {
+    from {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}

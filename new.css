@@ -23,3 +23,88 @@ body {
     border: rgb(0, 0, 0) 3px solid;
     margin: 5px;
 }
+
+.calender {
+    width: 100%;
+    height: 70vh;
+    margin-top: 10rem;
+}
+
+.week {
+    display: flex;
+    border: 2px solid black;
+    height: 10vh;
+}
+
+.day {
+    border: 2px black solid;
+    height: 10vh;
+    width: 14.3%;
+}
+
+.day::before {
+    content: attr(day);
+    display: flex;
+    height: 20px;
+    width: 20px;
+    border: black 1px solid;
+}
+
+.day::after {
+    content: attr(weekend);
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    position: relative;
+    height: 0.5vh;
+}
+
+.dayname {
+    display: inline-block;
+    flex-direction: row;
+    border: 2px black solid;
+    height: 5vh;
+    width: 14.3%;
+    
+}
+
+.dayname::before {
+    content: attr(dayname);
+    display: flex;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+}
+
+.day_wrapper {
+    display: flex;
+}
+
+.verse {
+    line-height: 2;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.song {
+    margin: auto;
+    margin-top: 9rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+    .day {
+        height: 5vh;
+        border: 2px rgb(0, 0, 0) solid;
+    }
+    .week {
+        height: 5vh;
+    }
+    .calender {
+        width: 70%;
+        background-color: lightskyblue;
+    }
+}
